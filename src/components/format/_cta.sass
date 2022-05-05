@@ -1,0 +1,64 @@
+#cta
+    width: 100%
+    text-align: center
+
+    #cta_img
+        margin: 15px auto
+        max-width: calc(100% - 30px)
+
+    #cta_img_long, #cta_img_medium
+        margin: 15px auto
+        max-width: calc(100% - 30px)
+        display: none
+
+    #cta_img_medium
+        margin-top: -160px
+        width: 500px
+
+    .first, .second
+        color: $yellow
+        font-family: $poppins
+        z-index: 20
+        position: relative
+        font-weight: 900
+        letter-spacing: 4px
+        text-align: center
+        margin: 0px 15px
+        font-size: 40px
+        text-transform: uppercase
+        // filter: drop-shadow(-5px -5px 0px $grey)
+        transform: translate(0%, 0%) skew(0deg, -30deg) scaleY(1.337)
+
+    .second
+        transform: translate(4.5%, -48%) skew(60deg, -30deg) scaleY(0.667)
+        color: $grey
+
+    #one, #two, #three
+        display: block
+        vertical-align: bottom
+        width: 475px
+        margin: auto
+
+    #two, #three
+        // margin-left: -300px
+        margin-top: 30px
+
+@media screen and ( max-width: 900px ) and ( min-width: 420px )
+    #cta_img
+        display: none
+
+    #cta_img_medium
+        display: block!important
+
+    #cta_img_long
+        display: none
+
+@media screen and ( max-width: 420px )
+    #cta_img
+        display: none
+
+    #cta_img_medium
+        display: none
+
+    #cta_img_long
+        display: block!important

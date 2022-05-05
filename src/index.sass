@@ -1,0 +1,79 @@
+@import "./components/_variables"
+
+body
+    margin: 0px
+    background-color: $white
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+
+    #root
+        width: 100%
+
+        .App
+            width: 100%
+
+            #main
+                width: 100vw
+                height: 100vh
+                overflow-x: hidden
+                overflow-y: auto
+                z-index: 100
+                position: relative
+
+                @import "./components/format/_logo"
+                @import "./components/format/_wave"
+                @import "./components/format/_cta"
+                @import "./components/footer/_footer"
+
+                #main_logo
+                    text-align: left
+
+                    #scroll
+                        position: relative
+                        z-index: 4
+                        color: $white
+                        text-align: center
+                        font-family: $poppins
+                        margin-top: -20px
+                        font-weight: 200
+                        font-size: 20px
+
+                #body
+                    min-height: 400px
+                    margin-top: -50px
+                    z-index: 1
+                    position: relative
+
+                    .section
+                        &.slow
+                            height: 110vh
+
+                        &.white
+                            background-color: $white
+
+                        &.green
+                            background-color: $green
+                            z-index: 30
+                            position: relative
+                            text-align: center
+
+                            @import "./components/about/_about"
+                            @import "./components/signup/_signup"
+
+                        #slow
+                            position: absolute
+                            width: 100%
+                            // transform: translate(-50%, -50%)
+                            // left: 50%
+
+@media screen and ( max-width: 900px )
+    body
+        #root
+            .App
+                #main
+                    #body
+                        .section
+                            &.slow
+                                margin-top: 10%
+    
