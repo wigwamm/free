@@ -17,7 +17,7 @@ function Free2(props) {
     }, [])
 
     return (
-        <div id="main">
+        <div id="main" className='v2'>
             <Background />
 
             <div id="container">

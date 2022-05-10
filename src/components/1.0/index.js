@@ -18,7 +18,7 @@ export default function Index(props) {
     }, [])
 
     return (
-        <div id="main">
+        <div id="main" className='v1'>
             <Wave />
 
             <div id="main_logo">

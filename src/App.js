@@ -18,7 +18,7 @@ export default function App() {
         <PersistGate persistor={persistor}>
           <Router history={history}>
             <Switch>
-              <Route exact path="/1.0" component={Index} />
+              <Route exact path="/v1" component={Index} />
               <Route exact path="/" component={Free2} />
             </Switch>
           </Router>
