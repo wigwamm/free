@@ -5,6 +5,7 @@ import CTA from './format/cta';
 import Logo from './format/logo';
 import Wave from './format/wave';
 import SignUp from './signup/signup';
+import "./index.sass"
 
 export default function Index(props) {
     useEffect(() => {

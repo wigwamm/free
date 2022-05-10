@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../assets/img/logo-arrow-2.svg"
+import logo from "../../../assets/img/logo-arrow-2.svg"
 
 function Logo(props) {
     return (

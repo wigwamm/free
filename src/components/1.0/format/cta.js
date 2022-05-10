@@ -1,7 +1,7 @@
 import React from 'react';
-import cta from "../../assets/img/cta.svg"
-import cta_long from "../../assets/img/cta_long.svg"
-import cta_medium from "../../assets/img/cta_medium.svg"
+import cta from "../../../assets/img/cta.svg"
+import cta_long from "../../../assets/img/cta_long.svg"
+import cta_medium from "../../../assets/img/cta_medium.svg"
 
 function CTA(props) {
     return (

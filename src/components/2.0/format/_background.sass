@@ -1,0 +1,36 @@
+#background
+    width: 100vw
+    height: 100vh
+    position: absolute
+
+    #wave
+        transform: rotate(-90deg)
+        z-index: 2
+        margin-left: -725px
+
+    .column
+        display: inline-block
+        vertical-align: middle
+        width: 55vw
+        height: 100vh
+        z-index: 3
+        position: relative
+
+        &:nth-child(1)
+            background-color: $green
+            width: 45vw
+
+@media screen and ( max-width: 780px )
+    #background
+        #wave
+            transform: rotate(0deg)
+            margin-top: -189px
+            margin-left: -430px
+
+        .column
+            width: 100vw
+            height: 55vh
+
+            &:nth-child(1)
+                width: 100vw
+                height: 45vh
