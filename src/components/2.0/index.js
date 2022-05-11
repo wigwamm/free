@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import history from '../../history';
 import Count from './countdown/countdown';
 import Background from './format/background';
 import Logo from './format/logo';
@@ -8,6 +9,7 @@ function Free2(props) {
     useEffect(() => {
         document.getElementById("container").style.height = window.innerHeight + 'px';
         window.addEventListener("resize", () => {
+            console.log("Resize")
             document.getElementById("container").style.height = window.innerHeight + 'px';
         })
 
@@ -15,6 +17,16 @@ function Free2(props) {
             window.removeEventListener("resize", () => {})
         }
     }, [])
+
+    function getOrSign() {
+        try {
+            let uuid = localStorage.getItem("free:uuid")
+            if(!uuid) throw new Error("No UUID available in localStorage")
+            
+        } catch (err) {
+            history.push("/signup")
+        }
+    }
 
     return (
         <div id="main" className='v2'>
@@ -24,7 +36,7 @@ function Free2(props) {
                 <div id="body">
                     <div className='logo_container'>
                         <Logo />
-                        <div className='button'>
+                        <div className='button' onClick={getOrSign}>
                             Get your freebie
                         </div>
                     </div>

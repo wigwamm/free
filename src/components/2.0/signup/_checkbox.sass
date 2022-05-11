@@ -1,0 +1,35 @@
+.checkbox
+    margin-bottom: 10px
+    cursor: pointer
+
+    .box
+        width: 20px
+        height: 20px
+        display: inline-block
+        vertical-align: middle
+        border: 2px solid $white
+        box-shadow: 4px 4px 0px $grey
+        background-color: $white
+        position: relative
+        border-radius: 2px
+
+        &.active
+            background-color: $white
+
+        .tick
+            position: absolute
+            width: 12px
+            height: 3px
+            transform: rotate(-45deg)
+            top: 6px
+            left: 3px
+            border-bottom: 3px solid black
+            border-left: 3px solid black
+    
+    .label
+        color: $white
+        display: inline-block
+        vertical-align: middle
+        padding-left: 10px
+        font-family: $poppins
+        font-size: 14px
