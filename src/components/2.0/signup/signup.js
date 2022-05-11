@@ -8,7 +8,7 @@ function SignUp(props) {
     useEffect(() => {
         document.getElementById("container").style.height = window.innerHeight + 'px';
         window.addEventListener("resize", () => {
-            if(document.activeElement.prop('type') === 'text') document.getElementById("container").style.height = window.innerHeight + 'px';
+            if(document.activeElement.id !== "email" && document.activeElement.id !== "number") document.getElementById("container").style.height = window.innerHeight + 'px';
         })
 
         return () => {

@@ -9,20 +9,19 @@ function Free2(props) {
     useEffect(() => {
         document.getElementById("container").style.height = window.innerHeight + 'px';
         window.addEventListener("resize", () => {
-            console.log("Resize")
-            document.getElementById("container").style.height = window.innerHeight + 'px';
+            if (document.activeElement.id !== "email" && document.activeElement.id !== "number") document.getElementById("container").style.height = window.innerHeight + 'px';
         })
 
         return () => {
-            window.removeEventListener("resize", () => {})
+            window.removeEventListener("resize", () => { })
         }
     }, [])
 
     function getOrSign() {
         try {
             let uuid = localStorage.getItem("free:uuid")
-            if(!uuid) throw new Error("No UUID available in localStorage")
-            
+            if (!uuid) throw new Error("No UUID available in localStorage")
+
         } catch (err) {
             history.push("/signup")
         }
