@@ -9,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Index from "./components/1.0";
 import Free2 from "./components/2.0";
 import SignUp from "./components/2.0/signup/signup";
+import Freebie from "./components/2.0/freebie/freebie";
 
 let persistor = persistStore(store);
 
@@ -22,6 +23,7 @@ export default function App() {
               <Route exact path="/v1" component={Index} />
               <Route exact path="/" component={Free2} />
               <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/freebie" component={Freebie} />
             </Switch>
           </Router>
         </PersistGate>

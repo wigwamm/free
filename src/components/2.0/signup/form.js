@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Checkbox from './checkbox';
 import CountryCodes from './country_codes';
 import FloatingInput from './floating_input';
@@ -8,6 +8,16 @@ function Form(props) {
     const [number, setNumber] = useState("")
     const [cc, setCc] = useState("+44")
     const [notify, setNotify] = useState(true)
+
+    useEffect(() => {
+        props.setFormBody({
+            email_address: email || undefined,
+            phone_number: number || undefined,
+            country_code: cc || undefined,
+            notifications: notify || undefined
+        })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [email, number, cc, notify])
 
     return (
         <div className='form'>

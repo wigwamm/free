@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import agent from '../../constants/agent';
 import history from '../../history';
 import Count from './countdown/countdown';
 import Background from './format/background';
@@ -17,11 +18,11 @@ function Free2(props) {
         }
     }, [])
 
-    function getOrSign() {
+    async function getOrSign() {
         try {
-            let uuid = localStorage.getItem("free:uuid")
-            if (!uuid) throw new Error("No UUID available in localStorage")
-
+            let token = localStorage.getItem("free:token")
+            if (!token) throw new Error("No token available in localStorage")
+            else history.push("/freebie")
         } catch (err) {
             history.push("/signup")
         }
