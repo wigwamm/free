@@ -39,8 +39,8 @@ function SignUp(props) {
                     } catch (err) {
                         console.log(err)
                     }
-                } else console.log(login.message)
-            } else console.log(res.message)
+                }
+            }
         }
     }
 
